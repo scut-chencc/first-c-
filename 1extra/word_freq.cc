@@ -32,16 +32,19 @@ void WordStatic::read_file(const std::string& filename)
 	{
 		for(it==word_vector.begin();it!=word_vector.end();++it)
 		{
-			if(str.compare((*it).word)==0)
+			//if(str.compare((*it).word)==0)
+			if(str==(*it).word)
 			{
 				++((*it).freq);
+				break;
 			}
-			else{
-				Word new_word;
-				new_word.word=str;
-				new_word.freq=1;
-				word_vector.push_back(new_word);
-			}
+		}
+		if(it==word_vector.end())
+		{
+			struct Word new_word;
+			new_word.word=str.c_str();
+			new_word.freq=1;
+			word_vector.push_back(new_word);
 		}
 	}
 	for(it==word_vector.begin();it!=word_vector.end();++it)
@@ -52,7 +55,7 @@ void WordStatic::read_file(const std::string& filename)
 
 void WordStatic::write_file(const std::string& filename)
 {
-
+	int a=2;
 }
 
 int main(int argc,char* argv[])
