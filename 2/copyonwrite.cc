@@ -20,5 +20,5 @@ int main( )
 	 printf("&s1 is %x\n" ,s1.c_str( ));
 	 printf("&s2 is %x\n" ,s2.c_str( ));
 	 printf("&s3 is %x\n" ,s3.c_str( ));
-	 return 0;
+	 return 0;//
 }
